@@ -16,10 +16,17 @@ export enum Messages {
     EMAIL_REQUIRED = 'Email is required',
     PASSWORD_REQUIRED = 'Password is required',
     EMAIL_FORMAT_INVALID = 'Email format is invalid',
+    NO_PRODUCTS_FOUND = 'There are no products found.',
+}
+
+/** Product sort options — the visible labels of the home page sort dropdown */
+export enum SortOptions {
+    PRICE_HIGH_TO_LOW = 'Price (High - Low)',
 }
 
 /** UI route paths */
 export enum AppRoutes {
+    HOME = '/',
     LOGIN = '/auth/login',
 }
 
@@ -29,6 +36,7 @@ export enum ApiEndpoints {
     LOGOUT = '/users/logout',
     CURRENT_USER = '/users/me',
     REGISTER = '/users/register',
+    PRODUCT_SEARCH = '/products/search',
 }
 
 /**
