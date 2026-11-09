@@ -13,3 +13,6 @@
 export const PRODUCT_SEARCH_TERMS = ['Pliers', 'Hammer', 'Saw'] as const;
 
 export const NO_MATCH_SEARCH_TERM = 'xyz' as const;
+
+/** A results page far beyond the last one (the demo catalogue has a few pages at most). */
+export const OUT_OF_RANGE_PAGE = 9999 as const;

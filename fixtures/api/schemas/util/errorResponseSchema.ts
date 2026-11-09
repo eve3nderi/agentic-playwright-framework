@@ -38,6 +38,15 @@ export const NotFoundResponseSchema = z.strictObject({
 });
 
 /**
+ * Schema for 405 Method Not Allowed responses.
+ * Documented in the OpenAPI document (`MethodNotAllowedResponse`).
+ * Live example: {"message": "Method is not allowed for the requested route"}.
+ */
+export const MethodNotAllowedResponseSchema = z.strictObject({
+    message: z.string(),
+});
+
+/**
  * Schema for 422 Unprocessable Entity (validation) responses.
  * Live shape: a map of field name -> array of validation messages.
  */
@@ -50,6 +59,9 @@ export const UnprocessableEntityResponseSchema = z.record(
 export type UnauthorizedResponse = zOutput<typeof UnauthorizedResponseSchema>;
 export type ForbiddenResponse = zOutput<typeof ForbiddenResponseSchema>;
 export type NotFoundResponse = zOutput<typeof NotFoundResponseSchema>;
+export type MethodNotAllowedResponse = zOutput<
+    typeof MethodNotAllowedResponseSchema
+>;
 export type UnprocessableEntityResponse = zOutput<
     typeof UnprocessableEntityResponseSchema
 >;
